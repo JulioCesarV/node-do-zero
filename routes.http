@@ -1,0 +1,33 @@
+POST http://localhost:3333/videos
+// Enviando requisição
+Content-type: application/json
+// É preciso informar o tipo do conteúdo que está sendo enviado do fronte para o back. Nesse caso, um JSON
+
+{
+    "title": "Video 01",
+    "description": "Esse é o primeiro vídeo",
+    "duration": 180
+}
+
+### //Separador de rotas (###)
+
+GET http://localhost:3333/videos?search=01
+// Ao colocar o filtro na url "?search=node", o GET vai buscar apenas vídeos que contenham a palavra "node"
+// Ao colocar a url raiz sem o filtro, o GET irá retornar todos os vídeos
+
+###
+
+PUT http://localhost:3333/videos/56bb1154-e051-4065-81a0-0ae02a2100cf
+// Utilizar o ID do vídeo que vamos alterar
+Content-type: application/json
+
+{
+    "title": "Video 02",
+    "description": "Esse é o primeiro vídeo",
+    "duration": 180
+}
+
+###
+
+DELETE http://localhost:3333/videos/d95f0001-90b9-418d-9b48-dc4c70d7d7ef
+// Utilizar o ID do vídeo que vamos deletar
